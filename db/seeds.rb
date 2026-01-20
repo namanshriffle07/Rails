@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+#   
+["Naman","Ritesh","Suraj","Rahul","Ajay","Santosh"].each do |names|
+  User.insert({name:names,age:21})
+  
+end
