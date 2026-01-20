@@ -10,32 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_01_20_073629) do
-  create_table "contacts", force: :cascade do |t|
-    t.string "address"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+ActiveRecord::Schema[8.1].define(version: 2026_01_20_080916) do
   create_table "contacts_users", id: false, force: :cascade do |t|
     t.integer "contact_id", null: false
     t.integer "user_id", null: false
   end
-
-  create_table "students", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.string "name"
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.integer "contact_id", null: false
-    t.datetime "created_at", null: false
-    t.string "name"
-    t.datetime "updated_at", null: false
-    t.index ["contact_id"], name: "index_users_on_contact_id"
-    t.index ["name"], name: "index_users_on_name"
-  end
-
-  add_foreign_key "users", "contacts"
 end
