@@ -10,9 +10,5 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_01_20_080916) do
-  create_table "contacts_users", id: false, force: :cascade do |t|
-    t.integer "contact_id", null: false
-    t.integer "user_id", null: false
-  end
+ActiveRecord::Schema[8.1].define(version: 0) do
 end
